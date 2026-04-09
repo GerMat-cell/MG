@@ -55,47 +55,47 @@
   <a class="nav-cta" href="contact.html">Contacter</a>
 </nav>
 
-<section class="contact-section" id="contact">
+<section class="contact" id="contact">
   <div class="contact-left">
     <span class="sec-label">Contact</span>
     <h2>Parlons de votre projet</h2>
     <p>Que vous soyez un hôtel, une auberge, un camping ou une résidence de tourisme, nous sommes disponibles pour un premier échange sans engagement.</p>
 
-    <div class="contact-details">
-      <div class="cd"><div class="cd-dot"></div>Québec, Québec, Canada</div>
-      <div class="cd"><div class="cd-dot"></div>contact@gestionconseilmg.com</div>
-      <div class="cd"><div class="cd-dot"></div>Réponse garantie sous 24h ouvrées</div>
+    <div class="contact-infos">
+      <div class="ci"><div class="ci-dot"></div>Québec, Québec, Canada</div>
+      <div class="ci"><div class="ci-dot"></div>contact@gestionconseilmg.com</div>
+      <div class="ci"><div class="ci-dot"></div>Réponse garantie sous 24h ouvrées</div>
     </div>
   </div>
 
   <div class="contact-right">
     <form onsubmit="handleSubmit(event)">
-      <div class="form-row">
-        <div class="form-group">
+      <div class="row">
+        <div class="field">
           <label>Prénom</label>
-          <input type="text" placeholder="Votre prénom" required />
+          <input type="text" placeholder="Votre prénom" required>
         </div>
-        <div class="form-group">
+        <div class="field">
           <label>Nom</label>
-          <input type="text" placeholder="Votre nom" required />
+          <input type="text" placeholder="Votre nom" required>
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="field">
         <label>Courriel</label>
-        <input type="email" placeholder="votre@email.com" required />
+        <input type="email" placeholder="votre@email.com" required>
       </div>
 
-      <div class="form-group">
+      <div class="field">
         <label>Établissement</label>
-        <input type="text" placeholder="Nom de votre établissement" />
+        <input type="text" placeholder="Nom de votre établissement">
       </div>
 
-      <div class="form-row">
-        <div class="form-group">
+      <div class="row">
+        <div class="field">
           <label>Type d'établissement</label>
           <select>
-            <option value="" disabled selected>Votre secteur</option>
+            <option disabled selected>Votre secteur</option>
             <option>Hôtel</option>
             <option>Auberge</option>
             <option>Camping</option>
@@ -104,10 +104,10 @@
           </select>
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label>Service souhaité</label>
           <select>
-            <option value="" disabled selected>Votre besoin</option>
+            <option disabled selected>Votre besoin</option>
             <option>Diagnostic et recommandations</option>
             <option>Tarification dynamique</option>
             <option>Mise en marché</option>
@@ -117,7 +117,7 @@
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="field">
         <label>Message</label>
         <textarea placeholder="Décrivez brièvement votre projet ou vos besoins..."></textarea>
       </div>
@@ -126,6 +126,7 @@
     </form>
   </div>
 </section>
+
 
 <footer>
   <div class="foot-logo">Gestion Conseil MG</div>
