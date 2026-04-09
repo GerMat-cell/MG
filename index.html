@@ -505,13 +505,22 @@
       <div class="logo-sub">Partenaire de croissance touristique</div>
     </div>
   </a>
-  <ul class="nav-links">
+
+  <!-- Bouton hamburger (visible sur mobile) -->
+  <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <ul class="nav-links" id="main-nav">
     <li><a href="#services">Services</a></li>
     <li><a href="#secteurs">Secteurs</a></li>
     <li><a href="#approche">Notre approche</a></li>
     <li><a href="#apropos">À propos</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+
   <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Consulter</button>
 </nav>
 
