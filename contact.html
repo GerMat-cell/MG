@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Gestion Conseil MG</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
@@ -54,47 +54,48 @@
 
   <a class="nav-cta" href="contact.html">Contacter</a>
 </nav>
-<section class="contact" id="contact">
+
+<section class="contact-section" id="contact">
   <div class="contact-left">
     <span class="sec-label">Contact</span>
     <h2>Parlons de votre projet</h2>
     <p>Que vous soyez un hôtel, une auberge, un camping ou une résidence de tourisme, nous sommes disponibles pour un premier échange sans engagement.</p>
 
-    <div class="contact-infos">
-      <div class="ci"><div class="ci-dot"></div>Québec, Québec, Canada</div>
-      <div class="ci"><div class="ci-dot"></div>contact@gestionconseilmg.com</div>
-      <div class="ci"><div class="ci-dot"></div>Réponse garantie sous 24h ouvrées</div>
+    <div class="contact-details">
+      <div class="cd"><div class="cd-dot"></div>Québec, Québec, Canada</div>
+      <div class="cd"><div class="cd-dot"></div>contact@gestionconseilmg.com</div>
+      <div class="cd"><div class="cd-dot"></div>Réponse garantie sous 24h ouvrées</div>
     </div>
   </div>
 
   <div class="contact-right">
     <form onsubmit="handleSubmit(event)">
-      <div class="row">
-        <div class="field">
+      <div class="form-row">
+        <div class="form-group">
           <label>Prénom</label>
-          <input type="text" placeholder="Votre prénom" required>
+          <input type="text" placeholder="Votre prénom" required />
         </div>
-        <div class="field">
+        <div class="form-group">
           <label>Nom</label>
-          <input type="text" placeholder="Votre nom" required>
+          <input type="text" placeholder="Votre nom" required />
         </div>
       </div>
 
-      <div class="field">
+      <div class="form-group">
         <label>Courriel</label>
-        <input type="email" placeholder="votre@email.com" required>
+        <input type="email" placeholder="votre@email.com" required />
       </div>
 
-      <div class="field">
+      <div class="form-group">
         <label>Établissement</label>
-        <input type="text" placeholder="Nom de votre établissement">
+        <input type="text" placeholder="Nom de votre établissement" />
       </div>
 
-      <div class="row">
-        <div class="field">
+      <div class="form-row">
+        <div class="form-group">
           <label>Type d'établissement</label>
           <select>
-            <option disabled selected>Votre secteur</option>
+            <option value="" disabled selected>Votre secteur</option>
             <option>Hôtel</option>
             <option>Auberge</option>
             <option>Camping</option>
@@ -103,10 +104,10 @@
           </select>
         </div>
 
-        <div class="field">
+        <div class="form-group">
           <label>Service souhaité</label>
           <select>
-            <option disabled selected>Votre besoin</option>
+            <option value="" disabled selected>Votre besoin</option>
             <option>Diagnostic et recommandations</option>
             <option>Tarification dynamique</option>
             <option>Mise en marché</option>
@@ -116,7 +117,7 @@
         </div>
       </div>
 
-      <div class="field">
+      <div class="form-group">
         <label>Message</label>
         <textarea placeholder="Décrivez brièvement votre projet ou vos besoins..."></textarea>
       </div>
@@ -126,4 +127,16 @@
   </div>
 </section>
 
+<footer>
+  <div class="foot-logo">Gestion Conseil MG</div>
+  <div class="foot-links">
+    <a href="services.html">Services</a>
+    <a href="secteurs.html">Secteurs</a>
+    <a href="apropos.html">À propos</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="foot-right">© 2026 · Partenaire de croissance touristique · Québec, Québec</div>
+</footer>
 
+</body>
+</html>
