@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secteurs | Gestion Conseil MG</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .secteur-tabs { display: flex; border-bottom: 0.5px solid var(--border-soft); overflow-x: auto; }
+    .tab-btn { font-size: .82rem; font-weight: 400; letter-spacing: .06em; color: var(--text-muted); background: transparent; border: none; border-bottom: 2px solid transparent; padding: .9rem 1.6rem; cursor: pointer; font-family: 'Inter', sans-serif; transition: color .2s, border-color .2s; white-space: nowrap; }
+    .tab-btn.active { color: var(--encre); font-weight: 500; border-bottom-color: var(--ocre); }
+    .tab-btn:hover { color: var(--text); }
+    .secteur-panels { border: 0.5px solid var(--border-soft); border-top: none; background: var(--bg); }
+    .secteur-panel { display: none; grid-template-columns: 1fr 1fr; min-height: 400px; }
+    .secteur-panel.active { display: grid; }
+    .panel-left { padding: 3rem; border-right: 0.5px solid var(--border-soft); display: flex; flex-direction: column; justify-content: space-between; }
+    .panel-icon { width: 52px; height: 52px; background: var(--encre); border-radius: 6px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; }
+    .panel-icon svg { width: 24px; height: 24px; stroke: #fff; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .panel-title { font-family: 'Cormorant Garamond', serif; font-size: 2.1rem; font-weight: 400; color: var(--text); margin-bottom: .75rem; line-height: 1.2; }
+    .panel-title em { font-style: italic; color: var(--cobalt); }
+    .panel-subtitle { font-size: .86rem; font-weight: 300; color: var(--text-muted); line-height: 1.78; margin-bottom: 2rem; }
+    .panel-cta { display: inline-flex; align-items: center; gap: 8px; font-size: .75rem; font-weight: 500; color: var(--ocre); letter-spacing: .1em; text-transform: uppercase; cursor: pointer; border: 1px solid var(--ocre); padding: .65rem 1.3rem; border-radius: 3px; background: transparent; font-family: 'Inter', sans-serif; transition: background .2s, color .2s; text-decoration: none; }
+    .panel-cta:hover { background: var(--ocre); color: #fff; }
+    .panel-right { padding: 3rem; display: flex; flex-direction: column; }
+    .panel-challenge { margin-bottom: 2rem; }
+    .panel-challenge h4, .panel-services h4 { font-size: .7rem; font-weight: 500; letter-spacing: .15em; color: var(--cobalt); text-transform: uppercase; margin-bottom: 1rem; }
+    .panel-challenge p { font-size: .87rem; font-weight: 300; color: var(--text-muted); line-height: 1.78; }
+    .panel-services { border-top: 0.5px solid var(--border-soft); padding-top: 1.5rem; }
+    .panel-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .ptag { font-size: .72rem; font-weight: 400; color: var(--encre); background: var(--ivoire); border: 0.5px solid var(--safran); padding: 5px 13px; border-radius: 100px; letter-spacing: .03em; }
+    @media(max-width:860px){ .secteur-panel { grid-template-columns: 1fr; } .panel-left { border-right: none; border-bottom: 0.5px solid var(--border-soft); } }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="logo-wrap" href="index.html"><div class="logo-mark"><span>MG</span></div><div><div class="logo-text">Gestion Conseil MG</div><div class="logo-sub">Partenaire de croissance touristique</div></div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li><li><a href="services.html">Services</a></li><li><a href="secteurs.html" class="active">Secteurs</a></li><li><a href="approche.html">Notre approche</a></li><li><a href="apropos.html">À propos</a></li>
+  </ul>
+  <a class="nav-cta" href="index.html#contact">Consulter</a>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Accueil</a><a href="services.html">Services</a><a href="secteurs.html">Secteurs</a><a href="approche.html">Notre approche</a><a href="apropos.html">À propos</a>
+  <a class="mobile-cta" href="index.html#contact">Consulter</a>
+</div>
+
+<div class="page-hero">
+  <span class="sec-label">Nos secteurs</span>
+  <h1>Une expertise adaptée<br><em>à chaque hébergement</em></h1>
+  <p>Chaque secteur a ses propres enjeux. Nous adaptons notre approche à votre réalité opérationnelle et à votre clientèle.</p>
+</div>
+
+<div class="tagline-bar">
+  <span class="tl-item">Diagnostic</span><div class="tl-dot"></div>
+  <span class="tl-item">Tarification dynamique</span><div class="tl-dot"></div>
+  <span class="tl-item">Mise en marché</span><div class="tl-dot"></div>
+  <span class="tl-item">Transition numérique</span>
+</div>
+
+<section class="section" style="background:var(--bg-soft)">
+  <div class="secteur-tabs">
+    <button class="tab-btn active" onclick="showTab('hotel',this)">Hôtel</button>
+    <button class="tab-btn" onclick="showTab('auberge',this)">Auberge</button>
+    <button class="tab-btn" onclick="showTab('camping',this)">Camping</button>
+    <button class="tab-btn" onclick="showTab('residence',this)">Résidence de tourisme</button>
+  </div>
+  <div class="secteur-panels">
+    <div class="secteur-panel active" id="panel-hotel">
+      <div class="panel-left">
+        <div>
+          <div class="panel-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="1"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+          <span class="sec-label" style="margin-bottom:.4rem">Secteur</span>
+          <div class="panel-title">Hôtellerie</div>
+          <p class="panel-subtitle">Des établissements indépendants aux petites chaînes régionales, l'hôtel est un secteur où chaque chambre compte et où la performance tarifaire fait toute la différence.</p>
+        </div>
+        <a class="panel-cta" href="index.html#contact">Discuter de votre projet →</a>
+      </div>
+      <div class="panel-right">
+        <div class="panel-challenge"><h4>Vos enjeux</h4><p>Dans un marché hôtelier de plus en plus concurrentiel et digitalisé, maintenir un taux d'occupation élevé tout en préservant votre tarif moyen est un défi quotidien. La visibilité en ligne, la gestion des OTA et l'expérience client sont des leviers déterminants que nous vous aidons à maîtriser.</p></div>
+        <div class="panel-services"><h4>Ce que nous apportons</h4><div class="panel-tags"><span class="ptag">Stratégie tarifaire saisonnière</span><span class="ptag">Optimisation Booking &amp; Expedia</span><span class="ptag">Audit opérationnel</span><span class="ptag">Mise en valeur des chambres</span><span class="ptag">Transition PMS</span><span class="ptag">Formation du personnel</span><span class="ptag">Suivi des performances</span></div></div>
+      </div>
+    </div>
+    <div class="secteur-panel" id="panel-auberge">
+      <div class="panel-left">
+        <div>
+          <div class="panel-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <span class="sec-label" style="margin-bottom:.4rem">Secteur</span>
+          <div class="panel-title">Auberge</div>
+          <p class="panel-subtitle">Les auberges — de charme, rurales ou de jeunesse — offrent une expérience unique fondée sur l'authenticité et l'accueil. Leur potentiel commercial est souvent sous-exploité.</p>
+        </div>
+        <a class="panel-cta" href="index.html#contact">Discuter de votre projet →</a>
+      </div>
+      <div class="panel-right">
+        <div class="panel-challenge"><h4>Vos enjeux</h4><p>Les auberges font face à des défis particuliers : saisonnalité prononcée, ressources limitées, faible visibilité numérique et difficulté à se différencier. Nous vous aidons à construire une identité forte et à rayonner sur les bonnes plateformes.</p></div>
+        <div class="panel-services"><h4>Ce que nous apportons</h4><div class="panel-tags"><span class="ptag">Positionnement &amp; identité</span><span class="ptag">Tarification par saison</span><span class="ptag">Photos professionnelles</span><span class="ptag">Référencement Airbnb &amp; Booking</span><span class="ptag">Gestion des avis clients</span><span class="ptag">Outils de réservation en ligne</span><span class="ptag">Suivi régulier adapté</span></div></div>
+      </div>
+    </div>
+    <div class="secteur-panel" id="panel-camping">
+      <div class="panel-left">
+        <div>
+          <div class="panel-icon"><svg viewBox="0 0 24 24"><polygon points="3 17 12 3 21 17"/><line x1="3" y1="17" x2="21" y2="17"/></svg></div>
+          <span class="sec-label" style="margin-bottom:.4rem">Secteur</span>
+          <div class="panel-title">Camping</div>
+          <p class="panel-subtitle">Emplacements, chalets, tentes prêt-à-camper : le secteur se transforme avec la montée du glamping et des nouvelles attentes en quête de nature et d'authenticité.</p>
+        </div>
+        <a class="panel-cta" href="index.html#contact">Discuter de votre projet →</a>
+      </div>
+      <div class="panel-right">
+        <div class="panel-challenge"><h4>Vos enjeux</h4><p>La haute saisonnalité des campings exige une gestion rigoureuse des disponibilités, une tarification dynamique par type d'emplacement et une présence digitale optimisée pour capter les réservations en ligne.</p></div>
+        <div class="panel-services"><h4>Ce que nous apportons</h4><div class="panel-tags"><span class="ptag">Tarification par type d'unité</span><span class="ptag">Stratégie haute &amp; basse saison</span><span class="ptag">Mise en valeur visuelle</span><span class="ptag">Référencement plateformes camping</span><span class="ptag">Logiciel de réservation adapté</span><span class="ptag">Développement offre glamping</span><span class="ptag">Suivi des performances</span></div></div>
+      </div>
+    </div>
+    <div class="secteur-panel" id="panel-residence">
+      <div class="panel-left">
+        <div>
+          <div class="panel-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><rect x="9" y="14" width="6" height="8"/></svg></div>
+          <span class="sec-label" style="margin-bottom:.4rem">Secteur</span>
+          <div class="panel-title">Résidence <em>de tourisme</em></div>
+          <p class="panel-subtitle">Appartements meublés, studios ou villas en gestion locative touristique : la résidence cumule les enjeux de l'hôtellerie et de la gestion immobilière.</p>
+        </div>
+        <a class="panel-cta" href="index.html#contact">Discuter de votre projet →</a>
+      </div>
+      <div class="panel-right">
+        <div class="panel-challenge"><h4>Vos enjeux</h4><p>Entre la concurrence d'Airbnb, la gestion multi-unités et les exigences de classement, les résidences doivent se professionnaliser sur tous les fronts : tarification, visibilité, maintenance et expérience client.</p></div>
+        <div class="panel-services"><h4>Ce que nous apportons</h4><div class="panel-tags"><span class="ptag">Tarification multi-unités</span><span class="ptag">Optimisation Airbnb &amp; VRBO</span><span class="ptag">Photos &amp; descriptions</span><span class="ptag">Channel manager adapté</span><span class="ptag">Classement &amp; certification</span><span class="ptag">Gestion des avis</span><span class="ptag">Suivi mensuel des revenus</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="foot-brand"><span class="foot-logo">Gestion Conseil MG</span><span class="foot-tagline">Partenaire de croissance touristique</span></div>
+    <div class="foot-nav">
+      <div class="foot-nav-col"><span class="foot-col-title">Services</span><a href="services.html">Diagnostic &amp; Recommandations</a><a href="services.html">Tarification dynamique</a><a href="services.html">Mise en marché</a><a href="services.html">Transition numérique</a></div>
+      <div class="foot-nav-col"><span class="foot-col-title">Secteurs</span><a href="secteurs.html">Hôtel</a><a href="secteurs.html">Auberge</a><a href="secteurs.html">Camping</a><a href="secteurs.html">Résidence de tourisme</a></div>
+      <div class="foot-nav-col"><span class="foot-col-title">À propos</span><a href="apropos.html">Notre cabinet</a><a href="approche.html">Notre approche</a><a href="index.html#contact">Contact</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="foot-copy">© 2026 Gestion Conseil MG · Montréal, Québec, Canada · Tous droits réservés</span>
+    <span class="foot-contact"><a href="mailto:contact@gestionconseilmg.com">contact@gestionconseilmg.com</a></span>
+  </div>
+</footer>
+<script>
+const hamburger=document.querySelector('.hamburger'),mobileMenu=document.querySelector('.mobile-menu');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':'';});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow='';}));
+function showTab(id,btn){document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.secteur-panel').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById('panel-'+id).classList.add('active');}
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notre approche | Gestion Conseil MG</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .steps-section { padding: 4.5rem 3rem; background: var(--ivoire); }
+    .steps { display: grid; grid-template-columns: repeat(4,1fr); border-top: 0.5px solid rgba(196,122,30,.2); margin-top: 2rem; }
+    .step { padding: 2rem 1.8rem 2rem 0; border-right: 0.5px solid rgba(196,122,30,.2); }
+    .step:last-child { border-right: none; padding-right: 0; }
+    .step-n { font-family: 'Cormorant Garamond', serif; font-size: 3.2rem; color: var(--ocre); opacity: .25; line-height: 1; margin-bottom: .75rem; }
+    .step h4 { font-size: .9rem; font-weight: 500; color: var(--encre); margin-bottom: .5rem; }
+    .step p { font-size: .79rem; font-weight: 300; color: var(--text-muted); line-height: 1.72; }
+    .values-section { padding: 4.5rem 3rem; }
+    .values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 2.5rem; }
+    .val-card { border: 0.5px solid var(--border-soft); border-radius: var(--radius-lg); padding: 2rem 1.75rem; background: var(--bg-soft); transition: border-color .2s; }
+    .val-card:hover { border-color: var(--cobalt); }
+    .val-icon { width: 42px; height: 42px; background: var(--encre); border-radius: 6px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
+    .val-icon svg { width: 20px; height: 20px; stroke: #fff; fill: none; stroke-width: 1.5; stroke-linecap: round; }
+    .val-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--text); margin-bottom: .65rem; }
+    .val-card p { font-size: .82rem; font-weight: 300; color: var(--text-muted); line-height: 1.7; }
+    .engagement { padding: 4rem 3rem; background: var(--cobalt); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .engagement h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: #fff; font-weight: 400; }
+    .engagement h2 em { font-style: italic; color: var(--safran); }
+    .engagement p { font-size: .9rem; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.8; margin-top: 1rem; }
+    .engagement-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .e-stat { border-top: 1px solid rgba(255,255,255,.15); padding-top: 1.25rem; }
+    .e-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 600; color: var(--safran); line-height: 1; }
+    .e-label { font-size: .75rem; font-weight: 300; color: rgba(255,255,255,.55); margin-top: .4rem; letter-spacing: .05em; }
+    @media(max-width:860px){
+      .steps { grid-template-columns: 1fr 1fr; }
+      .step { border-bottom: 0.5px solid rgba(196,122,30,.2); }
+      .step:nth-child(2n) { border-right: none; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .engagement { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem; }
+      .steps-section { padding: 3rem 1.5rem; }
+      .values-section { padding: 3rem 1.5rem; }
+    }
+    @media(max-width:520px){ .values-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="logo-wrap" href="index.html"><div class="logo-mark"><span>MG</span></div><div><div class="logo-text">Gestion Conseil MG</div><div class="logo-sub">Partenaire de croissance touristique</div></div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li><li><a href="services.html">Services</a></li><li><a href="secteurs.html">Secteurs</a></li><li><a href="approche.html" class="active">Notre approche</a></li><li><a href="apropos.html">À propos</a></li>
+  </ul>
+  <a class="nav-cta" href="index.html#contact">Consulter</a>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Accueil</a><a href="services.html">Services</a><a href="secteurs.html">Secteurs</a><a href="approche.html">Notre approche</a><a href="apropos.html">À propos</a>
+  <a class="mobile-cta" href="index.html#contact">Consulter</a>
+</div>
+
+<div class="page-hero">
+  <span class="sec-label">Notre approche</span>
+  <h1>Comment nous<br><em>travaillons ensemble</em></h1>
+  <p>Un processus éprouvé en 4 étapes, conçu pour livrer des résultats concrets et durables pour votre établissement touristique.</p>
+</div>
+
+<div class="tagline-bar">
+  <span class="tl-item">Diagnostic</span><div class="tl-dot"></div>
+  <span class="tl-item">Tarification dynamique</span><div class="tl-dot"></div>
+  <span class="tl-item">Mise en marché</span><div class="tl-dot"></div>
+  <span class="tl-item">Transition numérique</span>
+</div>
+
+<section class="steps-section">
+  <span class="sec-label">Notre processus</span>
+  <h2>4 étapes vers la croissance</h2>
+  <div class="steps">
+    <div class="step"><div class="step-n">01</div><h4>Diagnostic</h4><p>Analyse approfondie de votre contexte, de vos forces, de vos enjeux et de votre environnement concurrentiel. Nous repartons rarement sans avoir une image complète de votre réalité terrain.</p></div>
+    <div class="step"><div class="step-n">02</div><h4>Co-construction</h4><p>Élaboration collaborative d'un plan d'action stratégique, réaliste et aligné avec vos ambitions, vos ressources et votre calendrier.</p></div>
+    <div class="step"><div class="step-n">03</div><h4>Déploiement</h4><p>Mise en œuvre opérationnelle avec vos équipes, dans le respect des délais et des priorités. Nous restons présents tout au long de l'exécution.</p></div>
+    <div class="step"><div class="step-n">04</div><h4>Suivi &amp; impact</h4><p>Évaluation continue des résultats, ajustements stratégiques et mesure de l'impact de chaque initiative pour garantir un retour sur investissement concret.</p></div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="sec-header">
+    <div><span class="sec-label">Nos valeurs</span><h2>Ce qui guide chacune<br>de nos interventions</h2></div>
+    <p class="sec-desc-right">Des principes non négociables qui définissent notre façon de travailler avec chaque client.</p>
+  </div>
+  <div class="values-grid">
+    <div class="val-card">
+      <div class="val-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <h3>Rigueur analytique</h3>
+      <p>Chaque recommandation repose sur des données concrètes, des benchmarks sectoriels et une analyse rigoureuse de votre contexte spécifique.</p>
+    </div>
+    <div class="val-card">
+      <div class="val-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <h3>Proximité client</h3>
+      <p>Un accompagnement personnalisé, à l'écoute de vos réalités quotidiennes et de vos contraintes opérationnelles concrètes.</p>
+    </div>
+    <div class="val-card">
+      <div class="val-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+      <h3>Vision internationale</h3>
+      <p>Une expertise développée au Canada, en Afrique et dans les Caraïbes, pour une perspective élargie sur les tendances mondiales du tourisme.</p>
+    </div>
+    <div class="val-card">
+      <div class="val-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <h3>Excellence opérationnelle</h3>
+      <p>Des livrables de qualité, dans les délais convenus, avec un niveau d'exigence élevé sur chaque détail de notre travail.</p>
+    </div>
+    <div class="val-card">
+      <div class="val-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+      <h3>Impact mesurable</h3>
+      <p>Des résultats quantifiables — taux d'occupation, RevPAR, revenus nets — pour valider concrètement la valeur de chaque intervention.</p>
+    </div>
+    <div class="val-card">
+      <div class="val-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h3>Éthique &amp; transparence</h3>
+      <p>Une relation de confiance fondée sur la transparence totale : nos méthodes, nos tarifs et nos conclusions vous sont toujours expliqués clairement.</p>
+    </div>
+  </div>
+</section>
+
+<div class="engagement">
+  <div>
+    <h2>Un engagement<br><em>sans équivoque</em></h2>
+    <p>Nous ne mesurons notre succès qu'à travers le vôtre. Chaque mandat est une collaboration à part entière, pas une simple prestation de services.</p>
+    <a class="btn-white" href="index.html#contact" style="margin-top:1.5rem;background:#fff;color:var(--cobalt);border:none;padding:.85rem 2rem;font-family:'Inter',sans-serif;font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border-radius:3px;text-decoration:none;display:inline-block;">Démarrer un projet</a>
+  </div>
+  <div class="engagement-stats">
+    <div class="e-stat"><div class="e-num">15+</div><div class="e-label">Années d'expertise en tourisme</div></div>
+    <div class="e-stat"><div class="e-num">120</div><div class="e-label">Projets accompagnés avec succès</div></div>
+    <div class="e-stat"><div class="e-num">3</div><div class="e-label">Zones géographiques d'intervention</div></div>
+    <div class="e-stat"><div class="e-num">98%</div><div class="e-label">Clients satisfaits de l'accompagnement</div></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="foot-brand"><span class="foot-logo">Gestion Conseil MG</span><span class="foot-tagline">Partenaire de croissance touristique</span></div>
+    <div class="foot-nav">
+      <div class="foot-nav-col"><span class="foot-col-title">Services</span><a href="services.html">Diagnostic &amp; Recommandations</a><a href="services.html">Tarification dynamique</a><a href="services.html">Mise en marché</a><a href="services.html">Transition numérique</a></div>
+      <div class="foot-nav-col"><span class="foot-col-title">Secteurs</span><a href="secteurs.html">Hôtel</a><a href="secteurs.html">Auberge</a><a href="secteurs.html">Camping</a><a href="secteurs.html">Résidence de tourisme</a></div>
+      <div class="foot-nav-col"><span class="foot-col-title">À propos</span><a href="apropos.html">Notre cabinet</a><a href="approche.html">Notre approche</a><a href="index.html#contact">Contact</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="foot-copy">© 2026 Gestion Conseil MG · Montréal, Québec, Canada · Tous droits réservés</span>
+    <span class="foot-contact"><a href="mailto:contact@gestionconseilmg.com">contact@gestionconseilmg.com</a></span>
+  </div>
+</footer>
+<script>
+const hamburger=document.querySelector('.hamburger'),mobileMenu=document.querySelector('.mobile-menu');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':'';});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow='';}));
+</script>
+</body>
+</html>

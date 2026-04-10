@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | Gestion Conseil MG</title>
+  <meta name="description" content="Nos 4 services : diagnostic, tarification dynamique, mise en marché et transition numérique."/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .services-grid { display: grid; grid-template-columns: repeat(2,1fr); border-top: 0.5px solid var(--border-soft); border-left: 0.5px solid var(--border-soft); }
+    .svc { padding: 2.5rem 2rem; border-right: 0.5px solid var(--border-soft); border-bottom: 0.5px solid var(--border-soft); display: flex; flex-direction: column; transition: background .2s; }
+    .svc:hover { background: var(--bg-soft); }
+    .svc-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1.5rem; }
+    .svc-num { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--cobalt); opacity: .3; line-height: 1; }
+    .svc-badge { font-size: .65rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; background: var(--ivoire); color: var(--ocre); border: 0.5px solid var(--safran); }
+    .svc h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 400; color: var(--text); margin-bottom: 1rem; line-height: 1.3; }
+    .svc h3 em { font-style: italic; color: var(--cobalt); }
+    .svc-body { font-size: .82rem; font-weight: 300; color: var(--text-muted); line-height: 1.75; flex: 1; }
+    .svc-items { list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: .55rem; }
+    .svc-items li { display: flex; align-items: flex-start; gap: 9px; font-size: .8rem; font-weight: 300; color: var(--text-muted); line-height: 1.55; }
+    .li-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--ocre); opacity: .5; flex-shrink: 0; margin-top: 7px; }
+    .svc-footer { margin-top: 1.5rem; padding-top: 1.2rem; border-top: 0.5px solid var(--border-soft); }
+    .svc-link { display: inline-flex; align-items: center; gap: 6px; font-size: .72rem; font-weight: 500; color: var(--cobalt); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; text-decoration: none; }
+    .svc-link:hover { color: var(--ocre); gap: 10px; }
+    @media(max-width:860px){ .services-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="logo-wrap" href="index.html"><div class="logo-mark"><span>MG</span></div><div><div class="logo-text">Gestion Conseil MG</div><div class="logo-sub">Partenaire de croissance touristique</div></div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="secteurs.html">Secteurs</a></li><li><a href="approche.html">Notre approche</a></li><li><a href="apropos.html">À propos</a></li>
+  </ul>
+  <a class="nav-cta" href="index.html#contact">Consulter</a>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Accueil</a><a href="services.html">Services</a><a href="secteurs.html">Secteurs</a><a href="approche.html">Notre approche</a><a href="apropos.html">À propos</a>
+  <a class="mobile-cta" href="index.html#contact">Consulter</a>
+</div>
+
+<div class="page-hero">
+  <span class="sec-label">Nos services</span>
+  <h1>Quatre leviers pour<br><em>accélérer votre croissance</em></h1>
+  <p>Un accompagnement structuré, de l'analyse initiale à la transformation numérique de vos opérations touristiques.</p>
+</div>
+
+<div class="tagline-bar">
+  <span class="tl-item">Diagnostic</span><div class="tl-dot"></div>
+  <span class="tl-item">Tarification dynamique</span><div class="tl-dot"></div>
+  <span class="tl-item">Mise en marché</span><div class="tl-dot"></div>
+  <span class="tl-item">Transition numérique</span>
+</div>
+
+<section class="section">
+  <div class="sec-header">
+    <div><span class="sec-label">Ce que nous faisons</span><h2>Des services pensés<br>pour votre réalité</h2></div>
+    <p class="sec-desc-right">Des solutions adaptées à chaque type d'acteur touristique — destinations, hôtels, opérateurs et institutions.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc">
+      <div class="svc-top"><div class="svc-num">01</div><div class="svc-badge">Fondation</div></div>
+      <h3>Diagnostic &amp;<br><em>Recommandations</em></h3>
+      <div class="svc-body">Un regard expert et objectif sur votre activité pour identifier les freins, les opportunités et les priorités d'action.
+        <ul class="svc-items">
+          <li><div class="li-dot"></div>Audit complet de votre offre touristique et de vos opérations</li>
+          <li><div class="li-dot"></div>Analyse de la concurrence et du positionnement marché</li>
+          <li><div class="li-dot"></div>Identification des leviers de croissance prioritaires</li>
+          <li><div class="li-dot"></div>Rapport de recommandations stratégiques actionnable</li>
+        </ul>
+      </div>
+      <div class="svc-footer"><a class="svc-link" href="index.html#contact">Démarrer →</a></div>
+    </div>
+    <div class="svc">
+      <div class="svc-top"><div class="svc-num">02</div><div class="svc-badge">Optimisation</div></div>
+      <h3>Tarification<br><em>Dynamique</em></h3>
+      <div class="svc-body">Maximisez vos revenus grâce à une stratégie de prix intelligente, adaptée à la demande, aux saisons et à votre clientèle cible.
+        <ul class="svc-items">
+          <li><div class="li-dot"></div>Analyse des données tarifaires et du comportement des réservations</li>
+          <li><div class="li-dot"></div>Élaboration d'une grille de prix dynamique et saisonnière</li>
+          <li><div class="li-dot"></div>Optimisation du taux d'occupation et du revenu par unité</li>
+          <li><div class="li-dot"></div>Veille concurrentielle et ajustements continus</li>
+        </ul>
+      </div>
+      <div class="svc-footer"><a class="svc-link" href="index.html#contact">Démarrer →</a></div>
+    </div>
+    <div class="svc">
+      <div class="svc-top"><div class="svc-num">03</div><div class="svc-badge">Croissance</div></div>
+      <h3>Accompagnement &amp;<br><em>Mise en marché</em></h3>
+      <div class="svc-body">Nous vous aidons à vous rendre visible, attractif et compétitif sur les marchés touristiques — avec un suivi régulier et personnalisé.
+        <ul class="svc-items">
+          <li><div class="li-dot"></div>Création de contenu visuel : photos professionnelles et visuels de qualité</li>
+          <li><div class="li-dot"></div>Référencement sur les plateformes clés (Airbnb, Booking, Expedia…)</li>
+          <li><div class="li-dot"></div>Optimisation des fiches et des descriptions pour maximiser la conversion</li>
+          <li><div class="li-dot"></div>Suivi régulier des performances, adapté à votre rythme et à vos objectifs</li>
+        </ul>
+      </div>
+      <div class="svc-footer"><a class="svc-link" href="index.html#contact">Démarrer →</a></div>
+    </div>
+    <div class="svc">
+      <div class="svc-top"><div class="svc-num">04</div><div class="svc-badge">Transformation</div></div>
+      <h3>Transition<br><em>Numérique</em></h3>
+      <div class="svc-body">Modernisez vos outils et vos processus pour gagner en efficacité, en autonomie et en compétitivité dans un secteur en pleine évolution.
+        <ul class="svc-items">
+          <li><div class="li-dot"></div>Audit de vos systèmes existants et identification des besoins</li>
+          <li><div class="li-dot"></div>Sélection et intégration des outils adaptés (PMS, channel manager, CRM…)</li>
+          <li><div class="li-dot"></div>Formation de vos équipes aux nouveaux outils numériques</li>
+          <li><div class="li-dot"></div>Support continu pour une transition en douceur et durable</li>
+        </ul>
+      </div>
+      <div class="svc-footer"><a class="svc-link" href="index.html#contact">Démarrer →</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="foot-brand"><span class="foot-logo">Gestion Conseil MG</span><span class="foot-tagline">Partenaire de croissance touristique</span></div>
+    <div class="foot-nav">
+      <div class="foot-nav-col"><span class="foot-col-title">Services</span><a href="services.html">Diagnostic &amp; Recommandations</a><a href="services.html">Tarification dynamique</a><a href="services.html">Mise en marché</a><a href="services.html">Transition numérique</a></div>
+      <div class="foot-nav-col"><span class="foot-col-title">Secteurs</span><a href="secteurs.html">Hôtel</a><a href="secteurs.html">Auberge</a><a href="secteurs.html">Camping</a><a href="secteurs.html">Résidence de tourisme</a></div>
+      <div class="foot-nav-col"><span class="foot-col-title">À propos</span><a href="apropos.html">Notre cabinet</a><a href="approche.html">Notre approche</a><a href="index.html#contact">Contact</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="foot-copy">© 2026 Gestion Conseil MG · Montréal, Québec, Canada · Tous droits réservés</span>
+    <span class="foot-contact"><a href="mailto:contact@gestionconseilmg.com">contact@gestionconseilmg.com</a></span>
+  </div>
+</footer>
+<script>
+const hamburger=document.querySelector('.hamburger'),mobileMenu=document.querySelector('.mobile-menu');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':'';});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow='';}));
+</script>
+</body>
+</html>
